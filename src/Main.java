@@ -36,6 +36,7 @@ public class Main{
         containsBox.setLocation(200,200);
 
         ListenEngine le = new ListenEngine(box);
+        //box.getDocument().addDocumentListener(le);
         box.addKeyListener(le);
     }
 
