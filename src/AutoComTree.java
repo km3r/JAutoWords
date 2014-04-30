@@ -1,10 +1,12 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Kyle Rosenthal
  * 4/28/14
  */
-public class AutoCTree {
+public class AutoComTree implements Serializable{
+    Node root;
 }
 class Node{
     char letter;

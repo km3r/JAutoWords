@@ -1,7 +1,4 @@
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -10,6 +7,12 @@ import java.awt.event.KeyListener;
  * 4/28/14
  */
 public class ListenEngine implements KeyListener {
+
+    private JTextField box;
+
+    public ListenEngine(JTextField box) {
+        this.box = box;
+    }
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -24,5 +27,12 @@ public class ListenEngine implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+
+    private String getLastWord(){
+        return null;
+    }
+    private String getCurWord(){
+        return null;
     }
 }
