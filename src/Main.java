@@ -8,16 +8,16 @@ import java.awt.event.KeyListener;
  * 4/28/14
  */
 public class Main{
+    static ListenEngine le;
     public static void main(String[] args) {
         setupUI();
-        setupWC();
+        le.setupWC();
         setupSC();
         setupWP();
 
     }
 
-    private static void setupWC() {
-    }
+
     private static void setupSC() {
     }
     private static void setupWP() {
@@ -35,7 +35,7 @@ public class Main{
         containsBox.setSize(300,100);
         containsBox.setLocation(200,200);
 
-        ListenEngine le = new ListenEngine(box);
+        le = new ListenEngine(box);
         //box.getDocument().addDocumentListener(le);
         box.addKeyListener(le);
     }

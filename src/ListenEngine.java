@@ -14,6 +14,8 @@ import java.awt.event.KeyListener;
  */
 public class ListenEngine implements KeyListener {
 
+    AutoComTree act;
+
     private JTextField box;
     private int offset = 0;
 
@@ -31,16 +33,29 @@ public class ListenEngine implements KeyListener {
 
     }
 
+    String currSel = "";
+
     @Override
     public void keyReleased(KeyEvent e) {
 
+        if (e.getKeyChar() == 8){
+            box.setText(box.getText().substring(0,box.getText().length() -1));
+        }
+        if (e.getKeyCode() == KeyEvent.VK_SPACE){
+            finishWord();
+            return;
+        }
         String str = box.getText();
-        box.setText(str +"q");
+        String high = act.getRestWord(getCurWord());
+        System.out.println(getCurWord()+":");
+        currSel = high.substring(getCurWord().length()-1);
+        box.setText(str + high);
         box.setSelectionColor(Color.BLACK);
         box.setSelectedTextColor(Color.WHITE);
-        box.setCaretPosition(box.getCaretPosition()-1);
+        box.setCaretPosition(box.getCaretPosition()-high.length());
         box.setSelectionStart(str.length());
-        box.setSelectionEnd(str.length()+1);
+        box.setSelectionEnd(str.length()+high.length());
+
 
         /**
         if (e.getKeyChar() == 8){
@@ -63,12 +78,24 @@ public class ListenEngine implements KeyListener {
 
     }
 
+    private void finishWord() {
+        box.setText(box.getText().substring(0,box.getText().length()-1) + currSel + " ");
+        currSel ="";
+    }
+
     public String getLastWord(){
         return null;
     }
     public String getCurWord(){
         String str = box.getText();
-        return str.substring(str.lastIndexOf(" "));
+        int i = str.lastIndexOf(" ");
+
+        if ( i < 0 ) return str;
+        else return str.substring(i);
     }
 
+    public void setupWC() {
+        act = new AutoComTree();
+        act.setup();
+    }
 }
