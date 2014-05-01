@@ -28,6 +28,7 @@ public class AutoComTree implements Serializable{
 
     }
     public void addWord(String str){
+        //System.out.println(str);
         if (str.length() == 0) return;
         int nodeNum = str.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
         if (root[nodeNum] == null) root[nodeNum] = new Node((char)nodeNum);
@@ -51,7 +52,7 @@ public class AutoComTree implements Serializable{
         str = "";
         if (cur.length() == 0) return null;
         int nodeNum = cur.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
-        if (root[nodeNum] == null) root[nodeNum] = new Node((char)nodeNum);
+        if (root[nodeNum] == null) return "";
         getRestWordHelp(cur,1,root[nodeNum]);
         if (str == null || str.length() < 1) return "";
         return str.substring(cur.length());
@@ -62,8 +63,8 @@ public class AutoComTree implements Serializable{
             return;
         }
         int nodeNum = str.substring(pos,pos+1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
-        if (n.children[nodeNum] == null) n.children[nodeNum] = new Node((char)nodeNum);
-        addWordHelper(str,pos+1,n.children[nodeNum]);
+        if (n.children[nodeNum] == null) return;
+        getRestWordHelp(str,pos+1,n.children[nodeNum]);
     }
 
 
@@ -96,7 +97,7 @@ class Node{
         for (String s: map.keySet()){
             if (map.get(s).usages > max.usages)
                 max = map.get(s);
-            else if (map.get(s).word.length() > 2
+            else if (map.get(s).word.length() > 4
                     && map.get(s).word.length() < max.word.length())
             {
                 max = map.get(s);

@@ -38,6 +38,7 @@ public class ListenEngine implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+
         if (e.getKeyChar() == 8){
             box.setText(box.getText().substring(0,box.getText().length() -1));
         }
@@ -47,8 +48,11 @@ public class ListenEngine implements KeyListener {
         }
         String str = box.getText();
         String high = act.getRestWord(getCurWord());
-        System.out.println(getCurWord()+":");
-        currSel = high.substring(getCurWord().length()-1);
+        //System.out.println(getCurWord()+":"+ high+ ":" + getCurWord().length());
+        currSel = "";
+        if (high.length() > 0) {
+            currSel = high;
+        }
         box.setText(str + high);
         box.setSelectionColor(Color.BLACK);
         box.setSelectedTextColor(Color.WHITE);
@@ -56,29 +60,14 @@ public class ListenEngine implements KeyListener {
         box.setSelectionStart(str.length());
         box.setSelectionEnd(str.length()+high.length());
 
-
-        /**
-        if (e.getKeyChar() == 8){
-            offset--;
-            try {
-                box.setText(box.getText(0,box.getText().length()-1));
-
-                box.setCaretPosition(box.getCaretPosition()-offset);
-            } catch (BadLocationException e1) {
-                e1.printStackTrace();
-            }
-            return;
-        }
-
-        box.setText(box.getText() +"q");
-        offset++;
-        box.setCaretPosition(box.getCaretPosition()-offset);
-
-        //*/
-
     }
 
     private void finishWord() {
+        if (currSel.length() == 0){
+
+            //System.out.println(";" + getCurWord()+ ";");
+            act.addWord(getCurWord());
+        }
         box.setText(box.getText().substring(0,box.getText().length()-1) + currSel + " ");
         currSel ="";
     }
@@ -87,11 +76,9 @@ public class ListenEngine implements KeyListener {
         return null;
     }
     public String getCurWord(){
-        String str = box.getText();
-        int i = str.lastIndexOf(" ");
+        String[] arr = box.getText().split(" ");
 
-        if ( i < 0 ) return str;
-        else return str.substring(i);
+        return arr[arr.length-1];
     }
 
     public void setupWC() {
