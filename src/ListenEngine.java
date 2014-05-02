@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.*;
 
 /**
  * Kyle Rosenthal
@@ -82,7 +83,41 @@ public class ListenEngine implements KeyListener {
     }
 
     public void setupWC() {
-        act = new AutoComTree();
-        act.setup();
+        /**try {
+            FileInputStream fis = new FileInputStream(new File("res/act.dat"));
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            act = (AutoComTree) ois.readObject();
+            ois.close();
+            fis.close();
+            act.addWord("I");
+
+        } catch (Exception e) {//*/
+            act = new AutoComTree();
+            act.setup();/**
+        }
+        if (act == null) System.out.print("hey");
+        Runtime.getRuntime().addShutdownHook(new Thread()
+        {
+            @Override
+            public void run()
+            {
+                FileOutputStream fos = null;
+                try {
+                    File f = new File("res/act.dat");
+                    System.out.print(f.delete());
+                    fos = new FileOutputStream(f);
+
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(act);
+                    oos.close();
+                    fos.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //System.exit(0);
+                super.run();
+
+            }
+        });//*/
     }
 }

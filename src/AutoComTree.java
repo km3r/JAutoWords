@@ -10,6 +10,7 @@ import java.util.HashMap;
  * 4/28/14
  */
 public class AutoComTree implements Serializable{
+    private static final long serialVersionUID = 1L;
     Node[] root = new Node[26];
     public void setup(){
         try {
@@ -71,7 +72,8 @@ public class AutoComTree implements Serializable{
 
 
 }
-class Node{
+class Node implements Serializable{
+    private static final long serialVersionUID = 21L;
     char letter;
 
     //String word;
@@ -107,7 +109,8 @@ class Node{
         return max.word;
     }
 }
-class Word{
+class Word implements Serializable{
+    private static final long serialVersionUID = 123L;
     String word;
     int usages;
 
