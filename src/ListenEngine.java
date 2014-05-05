@@ -43,7 +43,13 @@ public class ListenEngine implements KeyListener {
         if (e.getKeyChar() == 8){
             box.setText(box.getText().substring(0,box.getText().length() -1));
         }
+        if (e.getKeyCode() == KeyEvent.VK_ENTER){
+            finishWord();
+            return;
+        }
+        //TODO STUFF
         if (e.getKeyCode() == KeyEvent.VK_SPACE){
+            currSel = "";
             finishWord();
             return;
         }
@@ -78,22 +84,37 @@ public class ListenEngine implements KeyListener {
     }
     public String getCurWord(){
         String[] arr = box.getText().split(" ");
-
+        if (arr.length < 1) return null;
         return arr[arr.length-1];
+    }
+    private void helpMe(ObjectInputStream ois){
+        try {
+            act = (AutoComTree) ois.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //System.out.println("wtf");
+        try {
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setupWC() {
-        /**try {
+        try {
             FileInputStream fis = new FileInputStream(new File("res/act.dat"));
             ObjectInputStream ois = new ObjectInputStream(fis);
-            act = (AutoComTree) ois.readObject();
-            ois.close();
+            helpMe(ois);
             fis.close();
             act.addWord("I");
 
         } catch (Exception e) {//*/
+            e.printStackTrace();
             act = new AutoComTree();
-            act.setup();/**
+            act.setup();//**
         }
         if (act == null) System.out.print("hey");
         Runtime.getRuntime().addShutdownHook(new Thread()
@@ -104,8 +125,8 @@ public class ListenEngine implements KeyListener {
                 FileOutputStream fos = null;
                 try {
                     File f = new File("res/act.dat");
-                    System.out.print(f.delete());
                     fos = new FileOutputStream(f);
+
 
                     ObjectOutputStream oos = new ObjectOutputStream(fos);
                     oos.writeObject(act);
@@ -114,7 +135,7 @@ public class ListenEngine implements KeyListener {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                //System.exit(0);
+
                 super.run();
 
             }

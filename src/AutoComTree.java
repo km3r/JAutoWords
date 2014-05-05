@@ -1,3 +1,5 @@
+import org.omg.CORBA.INTERNAL;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -53,6 +55,7 @@ public class AutoComTree implements Serializable{
         str = "";
         if (cur.length() == 0) return null;
         int nodeNum = cur.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
+        if (nodeNum > 26 || nodeNum < 0) return "";
         if (root[nodeNum] == null) return "";
         getRestWordHelp(cur,1,root[nodeNum]);
         if (str == null || str.length() < 1) return "";
@@ -96,14 +99,19 @@ class Node implements Serializable{
     public String getSug(){
         Word max = new Word("");
         max.usages--;
+        int mVal = Integer.MIN_VALUE;
+        int testVal;
         for (String s: map.keySet()){
-            if (map.get(s).usages > max.usages)
-                max = map.get(s);
-            else if (map.get(s).word.length() > 4
-                    && map.get(s).word.length() < max.word.length())
+            testVal = map.get(s).usages * 2 - map.get(s).word.length();
+            if (map.get(s).word.length() > 4) testVal -= 2;
+            if ( testVal > mVal)
             {
+                mVal = testVal;
                 max = map.get(s);
             }
+
+
+
         }
         if ( max.usages == 0) return null;
         return max.word;
