@@ -49,7 +49,7 @@ public class AutoComTree implements Serializable{
     }
 
 
-    String str = "";
+    public String str = "";
     public String getRestWord(String cur){
         if (cur.length() < 1) return "";
         str = "";
@@ -103,7 +103,7 @@ class Node implements Serializable{
         int testVal;
         for (String s: map.keySet()){
             testVal = map.get(s).usages * 2 - map.get(s).word.length();
-            if (map.get(s).word.length() > 4) testVal -= 2;
+            if (map.get(s).word.length() <= 4) testVal -= 8;
             if ( testVal > mVal)
             {
                 mVal = testVal;
@@ -114,6 +114,7 @@ class Node implements Serializable{
 
         }
         if ( max.usages == 0) return null;
+        System.out.println(max.word);
         return max.word;
     }
 }

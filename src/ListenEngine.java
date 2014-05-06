@@ -1,10 +1,8 @@
+
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
+
 import java.awt.*;
-import java.awt.event.ActionListener;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.*;
@@ -39,18 +37,22 @@ public class ListenEngine implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+        if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE &&
+                box.getText().length() < 1) {
+            return;
+        }
 
         if (e.getKeyChar() == 8){
             box.setText(box.getText().substring(0,box.getText().length() -1));
         }
         if (e.getKeyCode() == KeyEvent.VK_ENTER){
-            finishWord();
+            finishWord(" ");
             return;
         }
-        //TODO STUFF
+
         if (e.getKeyCode() == KeyEvent.VK_SPACE){
             currSel = "";
-            finishWord();
+            finishWord("");
             return;
         }
         String str = box.getText();
@@ -69,17 +71,19 @@ public class ListenEngine implements KeyListener {
 
     }
 
-    private void finishWord() {
+    private void finishWord(String s) {
         if (currSel.length() == 0){
 
             //System.out.println(";" + getCurWord()+ ";");
             act.addWord(getCurWord());
         }
-        box.setText(box.getText().substring(0,box.getText().length()-1) + currSel + " ");
+        String str =box.getText().substring(0,box.getText().length()-currSel.length()) + currSel + s;
+        box.setText(str);
         currSel ="";
     }
+    //TODO addword for auto
 
-    public String getLastWord(){
+    public String getLastWord(){  //TODO
         return null;
     }
     public String getCurWord(){
