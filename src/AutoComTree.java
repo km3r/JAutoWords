@@ -31,9 +31,9 @@ public class AutoComTree implements Serializable{
 
     }
     public void addWord(String str){
-        //System.out.println(str);
         if (str.length() == 0) return;
         int nodeNum = str.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
+        if (nodeNum > 26 || nodeNum < 0) return;
         if (root[nodeNum] == null) root[nodeNum] = new Node((char)nodeNum);
         addWordHelper(str,1,root[nodeNum]);
     }
@@ -79,8 +79,6 @@ class Node implements Serializable{
     private static final long serialVersionUID = 21L;
     char letter;
 
-    //String word;
-    //ArrayList<Word> arr;
     HashMap<String,Word> map;
     Node[] children = new Node[26];
 
@@ -114,7 +112,6 @@ class Node implements Serializable{
 
         }
         if ( max.usages == 0) return null;
-        System.out.println(max.word);
         return max.word;
     }
 }

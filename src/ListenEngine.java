@@ -16,21 +16,16 @@ public class ListenEngine implements KeyListener {
     AutoComTree act;
 
     private JTextField box;
-    private int offset = 0;
 
     public ListenEngine(JTextField box) {
         this.box = box;
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {
-        //System.out.println(e.getKeyChar());
-    }
+    public void keyTyped(KeyEvent e) {}
 
     @Override
-    public void keyPressed(KeyEvent e) {
-
-    }
+    public void keyPressed(KeyEvent e) {}
 
     String currSel = "";
 
@@ -42,7 +37,7 @@ public class ListenEngine implements KeyListener {
             return;
         }
 
-        if (e.getKeyChar() == 8){
+        if (e.getKeyChar() == 8 && currSel.length() > 0){
             box.setText(box.getText().substring(0,box.getText().length() -1));
         }
         if (e.getKeyCode() == KeyEvent.VK_ENTER){
@@ -55,9 +50,11 @@ public class ListenEngine implements KeyListener {
             finishWord("");
             return;
         }
+        if ((e.getKeyChar()+ "").toLowerCase().equals((e.getKeyChar()+ "").toUpperCase())){
+            return;
+        }
         String str = box.getText();
         String high = act.getRestWord(getCurWord());
-        //System.out.println(getCurWord()+":"+ high+ ":" + getCurWord().length());
         currSel = "";
         if (high.length() > 0) {
             currSel = high;
@@ -72,23 +69,27 @@ public class ListenEngine implements KeyListener {
     }
 
     private void finishWord(String s) {
-        if (currSel.length() == 0){
 
-            //System.out.println(";" + getCurWord()+ ";");
-            act.addWord(getCurWord());
-        }
+
         String str =box.getText().substring(0,box.getText().length()-currSel.length()) + currSel + s;
         box.setText(str);
         currSel ="";
-    }
-    //TODO addword for auto
+        act.addWord(getCurWord());
 
-    public String getLastWord(){  //TODO
-        return null;
+    }
+
+
+    public String getLastWord(){
+        String[] arr = box.getText().split(" ");
+        if (arr.length < 1) return null;
+        if (arr.length < 2 && box.getText().endsWith(" ")){
+            return arr[0];
+        }
+        return arr[arr.length-2];
     }
     public String getCurWord(){
         String[] arr = box.getText().split(" ");
-        if (arr.length < 1) return null;
+        if (arr.length < 1 /*|| box.getText().endsWith(" ")*/) return null; //TODO: get /**/ to work during finishWord()
         return arr[arr.length-1];
     }
     private void helpMe(ObjectInputStream ois){
@@ -143,6 +144,6 @@ public class ListenEngine implements KeyListener {
                 super.run();
 
             }
-        });//*/
+        });
     }
 }

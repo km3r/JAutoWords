@@ -10,35 +10,43 @@ import java.awt.event.KeyListener;
 public class Main{
     static ListenEngine le;
     static JFrame containsBox;
+    static JTextField box;
     static boolean loading = true;
     public static void main(String[] args) {
         setupUI();
 
-        new Thread(new Loading()).start();
-        le.setupWC();
-        loading = false;
+        new Thread(new Instructions()).start();
 
-        containsBox.setVisible(true);
+        JProgressBar jpb = new JProgressBar();
+        jpb.setIndeterminate(true);
+
+        containsBox.add(jpb);
+        containsBox.setTitle("Loading...");
+        le.setupWC();
+        containsBox.remove(jpb);
+        containsBox.add(box);
+        containsBox.setVisible(false);
+        containsBox.setVisible(true); //refresh
+        containsBox.requestFocus();
+        containsBox.setTitle("Word Predict 2000");
+
+
+
+
         setupSC();
         setupWP();
 
     }
 
-    static class Loading implements Runnable{
+    static class Instructions implements Runnable{
 
         @Override
         public void run() {
+
             JOptionPane.showMessageDialog(containsBox,
-                    "Type away, enter to insert auto complete" +
-                            "\nGive it a second to load",
+                    "Type away, enter to insert auto complete",
                     "Controls",
                     JOptionPane.PLAIN_MESSAGE);
-            while (loading){
-                JOptionPane.showMessageDialog(containsBox,
-                        "Loading...",
-                        "Loading...",
-                        JOptionPane.PLAIN_MESSAGE);
-            }
         }
     }
 
@@ -48,20 +56,18 @@ public class Main{
     }
 
     private static void setupUI(){
-        JTextField box = new JTextField();
+        box = new JTextField();
 
 
         containsBox = new JFrame();
 
         containsBox.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        containsBox.add(box);
-        containsBox.setVisible(false);
-        containsBox.setSize(300,100);
+        //containsBox.add(box);
+        containsBox.setVisible(true);
+        containsBox.setSize(400,80);
         containsBox.setLocation(200,200);
-
         le = new ListenEngine(box);
-        //box.getDocument().addDocumentListener(le);
         box.addKeyListener(le);
     }
 
