@@ -74,22 +74,25 @@ public class ListenEngine implements KeyListener {
         String str =box.getText().substring(0,box.getText().length()-currSel.length()) + currSel + s;
         box.setText(str);
         currSel ="";
-        act.addWord(getCurWord());
 
+        act.addWord(getLastWord());
+
+
+        //TODO:next word prediction
     }
 
 
     public String getLastWord(){
         String[] arr = box.getText().split(" ");
-        if (arr.length < 1) return null;
-        if (arr.length < 2 && box.getText().endsWith(" ")){
-            return arr[0];
+        if (arr.length < 1) return "";
+        if (arr.length > 0 && box.getText().endsWith(" ")){
+            return arr[arr.length-1];
         }
         return arr[arr.length-2];
     }
     public String getCurWord(){
         String[] arr = box.getText().split(" ");
-        if (arr.length < 1 /*|| box.getText().endsWith(" ")*/) return null; //TODO: get /**/ to work during finishWord()
+        if (arr.length < 1 || box.getText().endsWith(" ")) return "";
         return arr[arr.length-1];
     }
     private void helpMe(ObjectInputStream ois){
@@ -127,7 +130,7 @@ public class ListenEngine implements KeyListener {
             @Override
             public void run()
             {
-                FileOutputStream fos = null;
+                FileOutputStream fos;
                 try {
                     File f = new File("res/act.dat");
                     fos = new FileOutputStream(f);

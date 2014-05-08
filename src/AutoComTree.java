@@ -31,6 +31,10 @@ public class AutoComTree implements Serializable{
 
     }
     public void addWord(String str){
+
+        //TODO: handle ' (treat as letter) and . (remove)
+        str = str.replaceAll(".","");
+
         if (str.length() == 0) return;
         int nodeNum = str.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
         if (nodeNum > 26 || nodeNum < 0) return;
@@ -44,6 +48,7 @@ public class AutoComTree implements Serializable{
             return;
         }
         int nodeNum = str.substring(pos,pos+1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
+        if (nodeNum > 26 || nodeNum < 0) return;
         if (n.children[nodeNum] == null) n.children[nodeNum] = new Node((char)nodeNum);
         addWordHelper(str,pos+1,n.children[nodeNum]);
     }
@@ -52,6 +57,7 @@ public class AutoComTree implements Serializable{
     public String str = "";
     public String getRestWord(String cur){
         if (cur.length() < 1) return "";
+        cur = cur.replaceAll(".","");
         str = "";
         if (cur.length() == 0) return null;
         int nodeNum = cur.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);

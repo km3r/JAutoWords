@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0f60fb6-35c1-49c6-9c79-b72b605921e7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/act.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NextWordChain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AutoComTree.java" afterPath="$PROJECT_DIR$/src/AutoComTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListenEngine.java" afterPath="$PROJECT_DIR$/src/ListenEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JAutoWords.iws" />
@@ -75,10 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="9" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.19444445" vertical-offset="663" max-vertical-offset="1309">
+            <state line="50" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
@@ -87,11 +88,8 @@
       <file leaf-file-name="ListenEngine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="55" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2533">
-              <folding>
-                <element signature="e#3339#3937#0" expanded="true" />
-                <element signature="e#3926#3927#0" expanded="true" />
-              </folding>
+            <state line="76" column="0" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2499">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,7 +97,16 @@
       <file leaf-file-name="AutoComTree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="2142">
+            <state line="59" column="37" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2244">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NextWordChain.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NextWordChain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="26" selection-start="76" selection-end="76" vertical-scroll-proportion="0.083333336" vertical-offset="0" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -120,9 +127,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/JTextContain.java" />
         <option value="$PROJECT_DIR$/src/AutoCTree.java" />
-        <option value="$PROJECT_DIR$/src/AutoComTree.java" />
-        <option value="$PROJECT_DIR$/src/ListenEngine.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/ListenEngine.java" />
+        <option value="$PROJECT_DIR$/src/AutoComTree.java" />
       </list>
     </option>
   </component>
@@ -159,6 +166,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +247,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,6 +328,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -346,19 +366,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -479,18 +486,23 @@
       <created>1399392366201</created>
       <updated>1399392366201</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="error fixing is almost done">
+      <created>1399483048259</created>
+      <updated>1399483048259</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -502,12 +514,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32842106" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
@@ -529,7 +540,8 @@
     <MESSAGE value="autocomplete bug fixing, almost ready" />
     <MESSAGE value="autocomplete bug fixing, almost ready&#10;" />
     <MESSAGE value="error fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="error fixing" />
+    <MESSAGE value="error fixing is almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="error fixing is almost done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -541,6 +553,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="9" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="55" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="37" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
           <folding />
         </state>
@@ -549,10 +582,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="25" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -573,10 +603,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="20" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2550">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -597,10 +624,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="20" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2397">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,10 +645,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="0" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="2193">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -645,10 +666,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="14" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1598">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -669,10 +687,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="38" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,10 +708,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="42" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1360">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,10 +729,7 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="20" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="663">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,10 +743,14 @@
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="41" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="578">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="272">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -750,31 +763,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="2142">
+        <state line="50" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="55" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2533">
-          <folding>
-            <element signature="e#3339#3937#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-          </folding>
+        <state line="76" column="0" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2499">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="9" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.19444445" vertical-offset="663" max-vertical-offset="1309">
+        <state line="59" column="37" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2244">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NextWordChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="76" selection-end="76" vertical-scroll-proportion="0.083333336" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
