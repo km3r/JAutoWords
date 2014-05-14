@@ -14,6 +14,7 @@ import java.io.*;
 public class ListenEngine implements KeyListener {
 
     AutoComTree act;
+    NextWordChain nwc;
 
     private JTextField box;
 
@@ -68,7 +69,9 @@ public class ListenEngine implements KeyListener {
 
     }
 
+    String prev;
     private void finishWord(String s) {
+
 
 
         String str =box.getText().substring(0,box.getText().length()-currSel.length()) + currSel + s;
@@ -77,8 +80,29 @@ public class ListenEngine implements KeyListener {
 
         act.addWord(getLastWord());
 
+        if (prev != null){
+            nwc.add(prev,getLastWord());
+        }
 
+        System.out.println(getCurWord()+ ";" + getLastWord());
         //TODO:next word prediction
+        String high = nwc.get(getLastWord());
+        if (high.equals("")){
+            prev = getLastWord();
+            return;
+        }
+        currSel = "";
+        if (high.length() > 0) {
+            currSel = high;
+        }
+        box.setText(str + high);
+        box.setSelectionColor(Color.BLACK);
+        box.setSelectedTextColor(Color.WHITE);
+        box.setCaretPosition(box.getCaretPosition()-high.length());
+        box.setSelectionStart(str.length());
+        box.setSelectionEnd(str.length()+high.length());
+        prev = getLastWord();
+
     }
 
 
@@ -90,6 +114,7 @@ public class ListenEngine implements KeyListener {
         }
         return arr[arr.length-2];
     }
+
     public String getCurWord(){
         String[] arr = box.getText().split(" ");
         if (arr.length < 1 || box.getText().endsWith(" ")) return "";
@@ -98,6 +123,21 @@ public class ListenEngine implements KeyListener {
     private void helpMe(ObjectInputStream ois){
         try {
             act = (AutoComTree) ois.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //System.out.println("wtf");
+        try {
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void helpMe2(ObjectInputStream ois){
+        try {
+            nwc = (NextWordChain) ois.readObject();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -120,11 +160,23 @@ public class ListenEngine implements KeyListener {
             act.addWord("I");
 
         } catch (Exception e) {//*/
-            e.printStackTrace();
+            //e.printStackTrace();
             act = new AutoComTree();
             act.setup();//**
         }
-        if (act == null) System.out.print("hey");
+        try {
+            FileInputStream fis2 = new FileInputStream(new File("res/nwc.dat"));
+            ObjectInputStream ois2 = new ObjectInputStream(fis2);
+            helpMe2(ois2);
+            fis2.close();
+
+
+        } catch (Exception e) {
+            //e.printStackTrace();
+            nwc = new NextWordChain();
+
+        }
+        //if (act == null) System.out.print("hey");
         Runtime.getRuntime().addShutdownHook(new Thread()
         {
             @Override
@@ -140,6 +192,19 @@ public class ListenEngine implements KeyListener {
                     oos.writeObject(act);
                     oos.close();
                     fos.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                FileOutputStream fos2;
+                try {
+                    File f2 = new File("res/nwc.dat");
+                    fos2 = new FileOutputStream(f2);
+
+
+                    ObjectOutputStream oos2 = new ObjectOutputStream(fos2);
+                    oos2.writeObject(nwc);
+                    oos2.close();
+                    fos2.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

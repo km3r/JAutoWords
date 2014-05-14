@@ -33,7 +33,7 @@ public class AutoComTree implements Serializable{
     public void addWord(String str){
 
         //TODO: handle ' (treat as letter) and . (remove)
-        str = str.replaceAll(".","");
+        //str = str.replaceAll(".","");
 
         if (str.length() == 0) return;
         int nodeNum = str.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
@@ -57,7 +57,7 @@ public class AutoComTree implements Serializable{
     public String str = "";
     public String getRestWord(String cur){
         if (cur.length() < 1) return "";
-        cur = cur.replaceAll(".","");
+        //cur = cur.replaceAll(".","");
         str = "";
         if (cur.length() == 0) return null;
         int nodeNum = cur.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
@@ -120,15 +120,4 @@ class Node implements Serializable{
         if ( max.usages == 0) return null;
         return max.word;
     }
-}
-class Word implements Serializable{
-    private static final long serialVersionUID = 123L;
-    String word;
-    int usages;
-
-    Word(String word){
-        this.word = word;
-        usages = 1;
-    }
-
 }
