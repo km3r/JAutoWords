@@ -84,7 +84,6 @@ public class ListenEngine implements KeyListener {
             nwc.add(prev,getLastWord());
         }
 
-        System.out.println(getCurWord()+ ";" + getLastWord());
         //TODO:next word prediction
         String high = nwc.get(getLastWord());
         if (high.equals("")){
