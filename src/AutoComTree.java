@@ -1,9 +1,6 @@
 import org.omg.CORBA.INTERNAL;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -16,7 +13,16 @@ public class AutoComTree implements Serializable{
     Node[] root = new Node[26];
     public void setup(){
         try {
-            BufferedReader br1 = new BufferedReader(new FileReader("res/words.txt"));
+
+
+            BufferedReader br1;
+            try {
+                br1 = new BufferedReader(new FileReader("res/words.txt"));
+            } catch (FileNotFoundException e){
+                br1 = new BufferedReader(
+                        new InputStreamReader(
+                                getClass().getResourceAsStream("/res/words.txt")));
+            }
             String line = br1.readLine();
             while (line != null){
                 addWord(line);
@@ -32,8 +38,6 @@ public class AutoComTree implements Serializable{
     }
     public void addWord(String str){
 
-        //TODO: handle ' (treat as letter) and . (remove)
-        //str = str.replaceAll(".","");
 
         if (str.length() == 0) return;
         int nodeNum = str.substring(0,1).toLowerCase().codePointAt(0) - "a".codePointAt(0);
@@ -81,6 +85,10 @@ public class AutoComTree implements Serializable{
 
 
 }
+
+/**
+ * personal tree nodes with 26 children for each letter a-z
+ */
 class Node implements Serializable{
     private static final long serialVersionUID = 21L;
     char letter;

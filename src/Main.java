@@ -7,6 +7,10 @@ import java.awt.event.KeyListener;
  * Kyle Rosenthal
  * 4/28/14
  */
+
+/**
+ * sets up gui and various databases
+ */
 public class Main{
     static ListenEngine le;
     static JFrame containsBox;

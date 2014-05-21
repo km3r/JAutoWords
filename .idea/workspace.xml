@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="JAutoWords" />
+      <artifact name="JAutoWord" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0f60fb6-35c1-49c6-9c79-b72b605921e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Word.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/act.dat" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/act.dat" afterPath="$PROJECT_DIR$/res/act.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AutoComTree.java" afterPath="$PROJECT_DIR$/src/AutoComTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListenEngine.java" afterPath="$PROJECT_DIR$/src/ListenEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NextWordChain.java" afterPath="$PROJECT_DIR$/src/NextWordChain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JAutoWords.iws" />
@@ -80,7 +80,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1360">
+            <state line="11" column="36" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
       <file leaf-file-name="ListenEngine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.027777778" vertical-offset="867" max-vertical-offset="3689">
+            <state line="218" column="42" selection-start="5637" selection-end="5637" vertical-scroll-proportion="0.3827534" vertical-offset="3351" max-vertical-offset="4012">
               <folding>
-                <element signature="e#4843#5891#0" expanded="true" />
-                <element signature="e#5880#5881#0" expanded="true" />
+                <element signature="e#4999#6043#0" expanded="true" />
+                <element signature="e#6032#6033#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,7 +101,7 @@
       <file leaf-file-name="AutoComTree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="10" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2074">
+            <state line="19" column="57" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2261">
               <folding />
             </state>
           </provider>
@@ -110,7 +110,7 @@
       <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="129" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="7" column="81" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -119,7 +119,7 @@
       <file leaf-file-name="NextWordChain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NextWordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="51" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+            <state line="17" column="52" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,9 +142,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/JTextContain.java" />
         <option value="$PROJECT_DIR$/src/AutoCTree.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Word.java" />
         <option value="$PROJECT_DIR$/src/NextWordChain.java" />
+        <option value="$PROJECT_DIR$/src/Word.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/AutoComTree.java" />
         <option value="$PROJECT_DIR$/src/ListenEngine.java" />
       </list>
@@ -154,7 +155,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -182,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,58 +211,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JAutoWords" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JAutoWords" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoComTree.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JAutoWords" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JAutoWords" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JAutoWords" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JAutoWords" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -345,19 +300,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -383,6 +325,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -515,12 +470,16 @@
       <created>1399910760037</created>
       <updated>1399910760037</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="just need to comment and small changes to allow for jar packaging">
+      <created>1400646661330</created>
+      <updated>1400646661330</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,18 +487,18 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39960822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.122395836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32842106" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12193823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32713026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -568,7 +527,8 @@
     <MESSAGE value="error fixing is almost done" />
     <MESSAGE value="finished AutoCom, to start word predict" />
     <MESSAGE value="finished AutoCom, to start word predict&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished AutoCom, to start word predict&#10;" />
+    <MESSAGE value="just need to comment and small changes to allow for jar packaging" />
+    <option name="LAST_COMMIT_MESSAGE" value="just need to comment and small changes to allow for jar packaging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -580,6 +540,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="3689">
+          <folding>
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="10" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="2193">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="129" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NextWordChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="51" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="918">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
           <folding />
         </state>
@@ -589,8 +589,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="0" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="2686">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -622,8 +622,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="0" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="2686">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -655,8 +655,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="55" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2635">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -679,8 +679,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="25" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="2516">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -703,8 +703,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="20" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2550">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -727,8 +727,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="20" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2397">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -751,8 +751,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="0" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="2193">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,8 +775,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="14" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1598">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,8 +799,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="38" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -823,8 +823,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="42" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1360">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,8 +847,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="20" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="663">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,8 +864,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="41" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="578">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -880,46 +880,53 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NextWordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="51" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+        <state line="17" column="52" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="1241">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="1377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="129" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+        <state line="7" column="81" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="12" selection-start="34" selection-end="34" vertical-scroll-proportion="0.025718609" vertical-offset="0" max-vertical-offset="661">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AutoComTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2074">
+        <state line="19" column="57" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2261">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ListenEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.027777778" vertical-offset="867" max-vertical-offset="3689">
+        <state line="218" column="42" selection-start="5637" selection-end="5637" vertical-scroll-proportion="0.3827534" vertical-offset="3351" max-vertical-offset="4012">
           <folding>
-            <element signature="e#4843#5891#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
+            <element signature="e#4999#6043#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -930,7 +937,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>JAutoWords</last-edited>
+          <last-edited>JAutoWord</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

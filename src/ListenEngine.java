@@ -69,7 +69,13 @@ public class ListenEngine implements KeyListener {
 
     }
 
+
     String prev;
+
+    /**
+     * finishes a word and updates usages across the databases, plus uses that NWC to guess the next word
+     * @param s
+     */
     private void finishWord(String s) {
 
 
@@ -105,6 +111,10 @@ public class ListenEngine implements KeyListener {
     }
 
 
+    /**
+     * gets the last entered word
+     * @return
+     */
     public String getLastWord(){
         String[] arr = box.getText().split(" ");
         if (arr.length < 1) return "";
@@ -114,11 +124,19 @@ public class ListenEngine implements KeyListener {
         return arr[arr.length-2];
     }
 
+    /*
+    gets the currently being worked on word
+     */
     public String getCurWord(){
         String[] arr = box.getText().split(" ");
         if (arr.length < 1 || box.getText().endsWith(" ")) return "";
         return arr[arr.length-1];
     }
+
+    /**
+     * helper methods for loading
+     * @param ois
+     */
     private void helpMe(ObjectInputStream ois){
         try {
             act = (AutoComTree) ois.readObject();
@@ -127,7 +145,7 @@ public class ListenEngine implements KeyListener {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //System.out.println("wtf");
+
         try {
             ois.close();
         } catch (IOException e) {
@@ -142,7 +160,7 @@ public class ListenEngine implements KeyListener {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //System.out.println("wtf");
+
         try {
             ois.close();
         } catch (IOException e) {
@@ -150,32 +168,34 @@ public class ListenEngine implements KeyListener {
         }
     }
 
+    /**
+     * called to set up the class
+     */
     public void setupWC() {
+        System.getProperty("user.home");
         try {
-            FileInputStream fis = new FileInputStream(new File("res/act.dat"));
+            FileInputStream fis = new FileInputStream(new File("./act.dat"));
             ObjectInputStream ois = new ObjectInputStream(fis);
             helpMe(ois);
             fis.close();
             act.addWord("I");
 
-        } catch (Exception e) {//*/
-            //e.printStackTrace();
+        } catch (Exception e) {
+
             act = new AutoComTree();
-            act.setup();//**
+            act.setup();
         }
         try {
-            FileInputStream fis2 = new FileInputStream(new File("res/nwc.dat"));
+            FileInputStream fis2 = new FileInputStream(new File("./nwc.dat"));
             ObjectInputStream ois2 = new ObjectInputStream(fis2);
             helpMe2(ois2);
             fis2.close();
 
 
         } catch (Exception e) {
-            //e.printStackTrace();
             nwc = new NextWordChain();
 
         }
-        //if (act == null) System.out.print("hey");
         Runtime.getRuntime().addShutdownHook(new Thread()
         {
             @Override
@@ -183,7 +203,7 @@ public class ListenEngine implements KeyListener {
             {
                 FileOutputStream fos;
                 try {
-                    File f = new File("res/act.dat");
+                    File f = new File("./act.dat");
                     fos = new FileOutputStream(f);
 
 
@@ -196,7 +216,7 @@ public class ListenEngine implements KeyListener {
                 }
                 FileOutputStream fos2;
                 try {
-                    File f2 = new File("res/nwc.dat");
+                    File f2 = new File("./nwc.dat");
                     fos2 = new FileOutputStream(f2);
 
 
